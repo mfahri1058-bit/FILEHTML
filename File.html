@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Something...</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --maroon:#7a1f2b;
+  --pink:#f6c1cc;
+  --cream:#fff7ee;
+  --dark:#2b2b2b;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Inter', sans-serif;
+  background:linear-gradient(180deg,var(--cream),#fff);
+  color:var(--dark);
+  overflow-x:hidden;
+}
+
+/* GLOBAL */
+section{
+  padding:100px 20px;
+  max-width:900px;
+  margin:auto;
+}
+h1,h2{
+  font-family:'Playfair Display', serif;
+  color:var(--maroon);
+}
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 1s ease;
+}
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* OPENING */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+}
+.hero h1{
+  font-size:2.8em;
+  margin-bottom:20px;
+}
+.hero p{
+  font-size:1.1em;
+  opacity:.8;
+}
+.scroll-hint{
+  margin-top:60px;
+  font-size:.9em;
+  opacity:.6;
+  animation:float 2s infinite;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(10px)}
+}
+
+/* STORY */
+.story-card{
+  background:white;
+  border-radius:20px;
+  padding:40px;
+  box-shadow:0 20px 40px rgba(0,0,0,.05);
+}
+.story-card p{
+  line-height:1.8;
+  margin-top:20px;
+}
+
+/* MOMENTS */
+.moments{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.moment{
+  background:var(--pink);
+  padding:25px;
+  border-radius:16px;
+  font-size:.95em;
+  transition:.4s;
+}
+.moment:hover{
+  transform:translateY(-5px) rotate(-1deg);
+}
+
+/* NOTES */
+.notes{
+  background:#fff;
+  border-left:4px solid var(--maroon);
+  padding:30px;
+  margin-top:30px;
+  border-radius:12px;
+}
+
+/* SECRET BUTTON */
+.secret-btn{
+  margin-top:60px;
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:30px;
+  background:var(--maroon);
+  color:white;
+  text-decoration:none;
+  cursor:pointer;
+  transition:.4s;
+}
+.secret-btn:hover{
+  background:#5e1720;
+  transform:scale(1.05);
+}
+
+/* SURPRISE */
+#surprise{
+  display:none;
+  text-align:center;
+}
+#surprise p{
+  margin-top:20px;
+  line-height:1.8;
+}
+.heart{
+  font-size:2em;
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.2)}
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:60px 20px;
+  font-size:.85em;
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING -->
+<section class="hero fade">
+  <h1>Hai, Sekar</h1>
+  <p>Ada sesuatu nih dari aku mungkin ga seberapa, tapi percaya deh ini aku buat dengan tulus dari hati aku.<br>
+     Jadi pelan-pelan ya bacanya cantik.</p>
+  <div class="scroll-hint">scroll pelan ↓</div>
+</section>
+
+<!-- STORY -->
+<section class="fade">
+  <div class="story-card">
+    <h2>Awalnya sederhana</h2>
+    <p>
+      Kita nggak pernah benar-benar ngerencanain semuanya.  
+      Awalnya cuma main bareng, ngobrol biasa, ketawa² ga jelas, cerita hal random, dan tanpa sadar kamu bakal jadi orang yang paling sering aku pikirin.
+    </p>
+    <p>Aku inget banget pas awal kita ketemu kita diem²an ga terlalu deket karena baru kenal wkwk. Aku juga ga berani buat kenalan karena aku pikir ini cuma game yang suatu saat bakal aku tinggalin, tapi itu semua berubah pas kenal kamu. Kamu dateng dan ngebuat semuanya berubah, dulu aku kalau main suka kesepian karena ga ada temen tapi kamu suka tiba² join ke aku kadang juga sebaliknya aku yang join kamu.</p> 
+    <p>Dulu aku nganggep nya itu cuma hal biasa, tapi ternyata aku ga bisa bohong sama perasaan aku sendiri aku mulai nyaman bukan karena game nya tapi karena kamu</p>
+    <p>Dari dulu aku suka sama kamu tapi ga berani ngungkapin karena takut kamu tolak aku dan kita malah asing. Aku ga mau itu terjadi karena mungkin aku ga bakal ketemu sama orang yang kayak kamu lagi.</p> 
+    <p>kamu itu beda dari cewe² lain kamu itu lucu kamu selalu bisa ngertiin aku selalu baik ke aku dan kalau sama kamu aku ngerasa nyaman banget. Kehadiran kamu yang bikin aku ngerasa kalau hidup itu bisa dinikmatin juga</p>
+    <p>
+      Dari situ juga, hari-hari mulai kerasa beda.  
+      Bukan karena gamenya yang bikin bahagia, tapi karena selalu ada kamu di dalamnya.
+    </p>
+  </div>
+</section>
+
+<!-- NOTES -->
+<section class="fade">
+  <h2>Hal-hal yang aku suka dari kamu</h2>
+  <div class="notes">
+    <p>— Cara kamu peduli ke orang lain </p>
+    <p>— Reaksi kamu yang selalu excited ke aku </p>
+    <p>— Cara kamu hadir pas aku lagi kesusahan</p>
+    <p>— Dan kehadiran kamu yang buat hari-hari ku jadi lebih indah</p>
+  </div>
+</section>
+
+<!-- SECRET -->
+<section class="fade" style="text-align:center">
+  <p>Masih ada lagi nih coba cek :p.</p>
+  <div class="secret-btn" onclick="openSurprise()">Ada apa ya?</div>
+</section>
+
+<!-- SURPRISE -->
+<section id="surprise">
+  <div class="heart">❤️</div>
+  <h2>Terima kasih</h2>
+  <p>
+    Terima kasih karena hadir ke hidupku.  
+    Terima kasih juga karena mau bertahan, belajar, dan tumbuh bersama.
+  </p>
+  <p>
+    Aku nggak janji segalanya selalu mudah,  
+    tapi aku mau terus ada, selama kamu masih mau berjalan bareng.
+  </p>
+  <p>Kalau kamu ngerasa dunia jahat ke kamu kamu harus inget masih ada aku yang ada disisi kamu, jadi jangan pernah ngerasa sendirian ya :).
+  </p>
+  <p>I Love you Sayang ku. Ini mungkin cuma hal kecil, tapi rasanya jadi besar… karena kamu. 
+  Selamat Hari Valentine Sayang.
+  </p>
+</section>
+
+<footer>
+  Dari seseorang yang tetap ada disisi kamu.
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.2});
+faders.forEach(f=>observer.observe(f));
+
+function openSurprise(){
+  document.getElementById('surprise').style.display='block';
+  window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
